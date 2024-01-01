@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { BsCart4 } from "react-icons/bs";
 
-export default function ChooseButton({ right, top, left, onClick }) {
+export default function ChooseButton({ className, right, top, left, onClick }) {
   return (
-    <ChooseButtonStyled right={right} top={top} left={left} onClick={onClick}>
+    <ChooseButtonStyled
+      right={right}
+      top={top}
+      left={left}
+      onClick={onClick}
+      className={className}
+    >
       <div className="content">
         {right ? (
           <>
@@ -35,7 +41,7 @@ const ChooseButtonStyled = styled.div`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   width: 35%;
-  height: 7vh;
+  height: 70px;
   background: #00f6ff 0% 0% no-repeat padding-box;
   border-radius: 22px;
   .content {
@@ -57,6 +63,18 @@ const ChooseButtonStyled = styled.div`
       justify-content: center;
       color: #282828;
       font-size: 1.4vw;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    .content p {
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+    }
+
+    .content .cart {
+      font-size: 26px;
     }
   }
 `;

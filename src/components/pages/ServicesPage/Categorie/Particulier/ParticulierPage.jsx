@@ -17,7 +17,7 @@ export default function ParticulierPage() {
     <ParticulierPageStyled>
       <SectionNavBar />
       <h1>SERVICES</h1>
-      <div className="content">
+      <div className="content main-content">
         <FirstPartParticulier />
         <SecondPartParticulier />
         <ThirdPartParticulier />
@@ -43,14 +43,15 @@ export default function ParticulierPage() {
   );
 }
 
+
 const ParticulierPageStyled = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   color: white;
 
   &::before {
     content: "";
-    height: 100vh;
+    min-height: 110vh;
 
     position: absolute;
     top: 0;
@@ -87,25 +88,6 @@ const ParticulierPageStyled = styled.div`
       text-align: justify;
       font: normal normal bold 14px/17px Century Gothic;
     }
-    .influenceur {
-      width: 36%;
-      height: 100%;
-      background: transparent
-        linear-gradient(
-          225deg,
-          #5c0f6b 0%,
-          #9346b4d6 15%,
-          #2dd8de 87%,
-          #11f7ff 100%
-        )
-        0% 0% no-repeat padding-box;
-      box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
     .entreprise {
       width: 36%;
       height: 100%;
@@ -118,6 +100,87 @@ const ParticulierPageStyled = styled.div`
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+    .influenceur {
+      width: 36%;
+      height: 100%;
+      background: transparent
+      linear-gradient(
+        225deg,
+        #5c0f6b 0%,
+        #9346b4d6 15%,
+        #2dd8de 87%,
+        #11f7ff 100%
+      )
+      0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1536px) {
+    .nav {
+      width: 200px;
+      height: 80px;
+      position: absolute;
+      bottom: 3%;
+      p {
+        font-size: 13px;
+      }
+      .entreprise,
+      .influenceur {
+        width: 80px;
+      }
+    }
+  }
+
+  /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1024px) {
+    .content {
+      padding-left: 2%;
+    }
+  }
+
+  @media (max-width: 860px) {
+    padding-bottom: 150px;
+    position: relative;
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 130px;
+    }
+
+    .nav {
+      height:100px;
+      position: relative;
+      padding-top: 100px;
+      .entreprise,
+      .influenceur {
+        width: 80px;
+        height:100px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-height: 600px) {
+    &::before {
+      min-height: 150vh;
+    }
+  }
+
+  @media (min-height: 1024px) {
+    min-height: 142vh;
+    .nav{
+      padding-top: 40px;
     }
   }
 `;

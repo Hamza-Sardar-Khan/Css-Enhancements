@@ -9,6 +9,7 @@ export default function BlueTransparentSquare({
   background,
   transform,
   opacity,
+  zindex,
 }) {
   return (
     <BlueTransparentSquareStyled
@@ -19,6 +20,7 @@ export default function BlueTransparentSquare({
       background={background}
       transform={transform}
       opacity={opacity}
+      zindex={zindex}
     >
       <div></div>
     </BlueTransparentSquareStyled>
@@ -37,5 +39,5 @@ const BlueTransparentSquareStyled = styled.div`
   border-radius: 10px;
   transform: ${(props) => props.transform};
   opacity: ${(props) => props.opacity};
-  z-index: -1;
+  z-index: ${(props) => props.zindex?props.zindex:'-1' };;
 `;

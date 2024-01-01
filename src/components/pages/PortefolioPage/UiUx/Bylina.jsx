@@ -67,7 +67,7 @@ export default function Bylina() {
         <div className="picture-vertical">
           <img src={maquette} alt="" />
         </div>
-        <div className="title">
+        <div className="title second-title">
           <h1>BYLYNA</h1>
         </div>
       </div>
@@ -152,7 +152,7 @@ const BylinaStyled = styled.div`
         p {
           width: 90%;
           text-align: left;
-          font: normal normal normal 10px Century Gothic;
+          font: normal normal normal 13px Century Gothic;
           letter-spacing: 0px;
           color: #ffffff;
         }
@@ -171,6 +171,91 @@ const BylinaStyled = styled.div`
           text-align: center;
         }
       }
+    }
+  }
+
+  /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1536px) {
+    .first-part,
+    .second-part {
+      justify-content: space-evenly;
+    }
+    .second-part {
+      padding-left: 3%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .first-part,
+    .second-part {
+      padding-left: 0%;
+    }
+
+    .picture-vertical {
+      width: 24%;
+      height: 94%;
+    }
+
+    .second-part .result {
+      width: 26%;
+    }
+
+    .second-part .picture-horizontale {
+      width: 23%;
+    }
+    .square {
+      padding: 10px 0px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    position: relative;
+    padding-top: 10%;
+    .second-title {
+      display: none;
+    }
+    .title {
+      position: absolute;
+      top: 0%;
+    }
+    .title h1 {
+      writing-mode: horizontal-tb;
+    }
+
+    .second-part .result {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 660px) {
+    padding-top: 18%;
+
+    height: auto;
+    min-height: 36%;
+    .first-part,
+    .second-part {
+      flex-direction: column;
+    }
+    .picture-vertical,
+    .second-part .picture-horizontale {
+      width: 54%;
+      height: 94%;
+    }
+
+    .second-part .result {
+      width: 90%;
+    }
+    .second-part .result .square {
+     margin-top: 10px;
+  }
+  }
+
+  @media (max-width: 490px) {
+    padding-top: 25%;
+    .picture-vertical,
+    .second-part .picture-horizontale {
+      width: 84%;
+      height: 94%;
     }
   }
 `;

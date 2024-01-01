@@ -42,4 +42,29 @@ const TitleEntrepriseStyled = styled.div`
     height: 100%;
     font-size: 100px;
   }
+
+  @media (max-width: 1280px) {
+    width: 200px;
+    height: 80px;
+
+    p{
+      font-size: 14px;
+    }
+
+    .icon{
+      font-size:60px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+  }
+
+  @media (max-width: 768px) {
+    a {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 640px) {
+  }
 `;

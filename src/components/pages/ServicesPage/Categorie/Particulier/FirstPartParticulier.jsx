@@ -43,41 +43,11 @@ export default function FirstPartParticulier() {
 
 const FirstPartParticulierStyled = styled.div`
   width: 33%;
-  height: 40vh;
-  .title {
-    position: relative;
-    width: 50%;
-    height: 35%;
-    transform: perspective(150px) rotateY(10deg);
-    background: transparent
-      linear-gradient(63deg, #8227a1 0%, #b98c54 62%, #baa43c 100%) 0% 0%
-      no-repeat padding-box;
-    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font: normal normal normal 1vw Century Gothic;
-      width: 50%;
-      height: 100%;
-    }
-    .icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50%;
-      height: 100%;
-      font-size: 100px;
-    }
-  }
+  height: 435px;
+
   .main {
     position: relative;
+    cursor: pointer;
     background: transparent linear-gradient(55deg, #f5ebc3 0%, #ffffff 100%) 0%
       0% no-repeat padding-box;
     box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
@@ -103,6 +73,130 @@ const FirstPartParticulierStyled = styled.div`
     }
     span {
       font-weight: bold;
+    }
+  }
+
+  .title {
+    position: relative;
+    width: 50%;
+    height: 30%;
+    transform: perspective(150px) rotateY(10deg);
+    transform: perspective(150px) rotateY(10deg);
+    background: transparent
+      linear-gradient(63deg, #8227a1 0%, #b98c54 62%, #baa43c 100%) 0% 0%
+      no-repeat padding-box;
+    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: normal normal normal 1vw Century Gothic;
+      width: 50%;
+      height: 100%;
+    }
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 100%;
+      img {
+        width: 70%;
+      }
+
+      width: 200px;
+      height: 80px;
+
+      p {
+        font-size: 14px;
+      }
+
+      .icon {
+        font-size: 60px;
+      }
+    }
+  }
+
+  /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1536px) {
+    height: 340px;
+    .main {
+      h1 {
+        font-size: 60px;
+        color: #2b2b2b;
+      }
+      h5 {
+        font: normal normal bold 12px "Century Gothic";
+      }
+      p {
+        font: normal normal normal 11px "Century Gothic";
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    width: 345px;
+    .main {
+      width: 345px;
+    }
+
+    .responsive {
+      left: 106%;
+    }
+
+    .title {
+      width: 200px;
+      height: 80px;
+
+      p {
+        font-size: 14px;
+      }
+
+      .icon {
+        font-size: 60px;
+      }
+    }
+  }
+
+  @media (max-width: 860px) {
+    margin-right: 10%;
+    .main {
+      height: 100%;
+    }
+    .responsive {
+      top: -20%;
+      z-index: 2;
+      width: 53%;
+      left: 75%;
+    }
+  }
+
+  @media (max-width: 515px) {
+    width: 95%;
+    height: 340px;
+    .main {
+      width: 90%;
+      padding-bottom: 10px;
+      p {
+        width: 89%;
+        font-size: 0.9rem;
+      }
+    }
+    margin-right: 0%;
+    .responsive {
+      top: -19%;
+      z-index: 2;
+      width: 69.5%;
+      left: 7%;
     }
   }
 `;

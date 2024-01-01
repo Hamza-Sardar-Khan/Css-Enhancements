@@ -12,7 +12,7 @@ export default function EntreprisePage() {
     <EntreprisePageStyled>
       <SectionNavBar />
       <h1>SERVICES</h1>
-      <div className="content">
+      <div className="content main-content">
         <FirstPart />
         <SecondPart />
         <ThirdPart />
@@ -20,20 +20,21 @@ export default function EntreprisePage() {
       <div className="footer">
         <ServicesFooter />
       </div>
-      <NavBarEntreprise />
+      <div className="nav">
+        <NavBarEntreprise />
+      </div>
     </EntreprisePageStyled>
   );
 }
 
 const EntreprisePageStyled = styled.div`
-  height: 100vh;
   width: 100%;
+  
   color: white;
 
   &::before {
     content: "";
-    height: 100vh;
-
+    min-height: 110vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -55,5 +56,44 @@ const EntreprisePageStyled = styled.div`
   .footer {
     display: flex;
     justify-content: center;
+  }
+
+  /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1024px) {
+    .content {
+      padding-left: 2%;
+    }
+  }
+
+  @media (max-width: 860px) {
+    padding-bottom: 150px;
+    position: relative;
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 130px;
+    }
+    .nav {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding-top: 100px;
+    }
+  }
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-height: 600px) {
+    &::before {
+      min-height: 150vh;
+    }
+  }
+
+  
+  @media (min-height: 1024px) {
+    min-height: 142vh;
   }
 `;

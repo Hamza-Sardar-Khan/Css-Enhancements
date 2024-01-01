@@ -8,6 +8,7 @@ import carac from "../../../../../public/illustration site internet/portefolio/L
 export default function Fortress() {
   return (
     <FortressStyled>
+      <div className="title2">{/* <img src={title} alt="" /> */}</div>
       <div className="description">
         <p>
           Premier livret de présentation du jeu. Depuis le concept a bien évolué
@@ -36,57 +37,65 @@ export default function Fortress() {
       <div className="carac">
         <img src={carac} alt="" />
       </div>
-      <BlueTransparentSquare
-        width={"5%"}
-        height={"8%"}
-        top={"306%"}
-        left={"38%"}
-        background={
-          "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
-        }
-        opacity={"0.47"}
-      />
-      <BlueTransparentSquare
-        width={"6%"}
-        height={"9%"}
-        top={"306%"}
-        left={"84%"}
-        background={
-          "transparent linear-gradient(50deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
-        }
-        transform={"matrix(0.96, 0.03, 0.22, -0.75, 0, 0);"}
-        opacity={"0.47"}
-      />
-      <BlueTransparentSquare
-        width={"5%"}
-        height={"9%"}
-        top={"374%"}
-        left={"6%"}
-        background={
-          "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
-        }
-        opacity={"0.47"}
-      />
-      <BlueTransparentSquare
-        width={"5%"}
-        height={"9%"}
-        top={"415%"}
-        left={"35%"}
-        background={
-          "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
-        }
-        opacity={"0.47"}
-      />
-      <BlueTransparentSquare
-        width={"6%"}
-        height={"9%"}
-        top={"420%"}
-        left={"83%"}
-        background={
-          "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
-        }
-        opacity={"0.47"}
-      />
+
+      <div className="blue">
+        <BlueTransparentSquare
+          width={"5%"}
+          height={"8%"}
+          top={"306%"}
+          left={"38%"}
+          background={
+            "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
+          }
+          opacity={"0.47"}
+          zindex={"1"}
+        />
+        <BlueTransparentSquare
+          width={"6%"}
+          height={"9%"}
+          top={"306%"}
+          left={"84%"}
+          background={
+            "transparent linear-gradient(50deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
+          }
+          transform={"matrix(0.96, 0.03, 0.22, -0.75, 0, 0);"}
+          opacity={"0.47"}
+          zindex={"1"}
+        />
+        <BlueTransparentSquare
+          width={"5%"}
+          height={"9%"}
+          top={"374%"}
+          left={"6%"}
+          background={
+            "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
+          }
+          opacity={"0.47"}
+          zindex={"1"}
+        />
+        <BlueTransparentSquare
+          width={"5%"}
+          height={"9%"}
+          top={"415%"}
+          left={"35%"}
+          background={
+            "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
+          }
+          opacity={"0.47"}
+          zindex={"1"}
+        />
+        <BlueTransparentSquare
+          width={"6%"}
+          height={"9%"}
+          top={"420%"}
+          left={"83%"}
+          background={
+            "transparent linear-gradient(47deg, #032C35 0%, #486E6C 100%) 0% 0% no-repeat padding-box;"
+          }
+          opacity={"0.47"}
+          zindex={"1"}
+        />
+      </div>
     </FortressStyled>
   );
 }
@@ -95,6 +104,9 @@ const FortressStyled = styled.div`
   width: 100%;
   height: 100vh;
   padding: 12% 0% 0% 16%;
+  .title2{
+    display:none;
+  }
   .description {
     position: relative;
     width: 25%;
@@ -128,7 +140,7 @@ const FortressStyled = styled.div`
     height: 51%;
     z-index: 2;
   }
-  .title {
+  .title,.title2 {
     position: relative;
     top: -55%;
     left: 17%;
@@ -152,4 +164,113 @@ const FortressStyled = styled.div`
     left: 40%;
     z-index: 0;
   }
+
+  /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1536px) {
+      .blue{
+        display:none;
+      }
+    min-height: 900px;
+    padding: 12% 0% 0% 14%;
+
+    img {
+      object-fit: cover;
+    }
+    .concept,
+    .carac {
+      width: 490px;
+      height: 500px;
+    }
+    .title {
+      width: 350px;
+    }
+    .resume {
+      width: 410px;
+      height: 400px;
+    }
+
+    .description {
+      width: 370px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 12% 0% 0% 10%;
+    margin-bottom:200px;
+    .description {
+      left: -7%;
+    }
+
+    .carac {
+      top: -119%;
+      z-index: 1;
+    }
+    .title {
+      width: 350px;
+    }
+    .resume {
+      top: -73%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 12% 0% 0% 0%;
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:4%;
+    row-gap:4%;
+    justify-content:center;
+    margin-bottom:500px;
+    .description{
+      width:410px;
+      height:400px;
+    }
+    .title{
+      display:none;
+    }
+    .title2{
+      background-image: url("../../../../../public/illustration site internet/portefolio/LengendOfFortress/Fortress of Legends.png");
+      background-size: cover;
+      background-position: 60% 45%;
+      background-repeat: no-repeat;
+      display:block;
+      position: relative;
+      top: 0%;
+      height:30%;
+      object-position: top !important;
+      width:90%;
+      left:0%;
+    }
+
+    .resume , .description , .concept , .carac {
+      left:auto;
+      top:auto;
+  }
+
+  @media (max-width: 938px) {
+    margin-bottom:1500px;
+  }
+
+  @media (max-width: 640px) {
+    margin-bottom:240%;
+    .title2{
+      height:15% ;
+    }
+    .resume , .description , .concept , .carac {
+      width:100%;
+      height:auto;
+  }
+  .description{
+    padding:20px 0px;
+    p{
+      font-size:11px;
+    }
+  }
+  }
+
+
+  @media (max-width: 480px) {
+    margin-bottom:210%;
+  }
+
 `;

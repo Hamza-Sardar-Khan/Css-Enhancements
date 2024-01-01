@@ -52,4 +52,9 @@ const ContactFormStyled = styled.div`
     height: 200px;
     padding-top: 10px;
   }
+
+  @media (max-width: 1024px) {
+    width: 85% !important;
+    padding:0px 20px;
+  }
 `;

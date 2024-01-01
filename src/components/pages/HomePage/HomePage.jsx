@@ -52,4 +52,21 @@ const HomePageStyled = styled.div`
       height: 40%;
     }
   }
+
+  @media (max-width: 1536px) {
+    .logo img{
+      width: 80%;
+      height: 40%;
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .logo img{
+      height: 20%;
+    }
+    .logo{
+      gap: 30px; 
+    }
+  }
 `;

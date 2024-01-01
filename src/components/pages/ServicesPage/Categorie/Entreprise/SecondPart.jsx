@@ -3,53 +3,55 @@ import styled from "styled-components";
 import TransparentSquare from "../../../../reusable-ui/TransparentSquare";
 import ChooseButton from "../../../../reusable-ui/ChooseButton";
 import { useNavigate } from "react-router-dom";
-
 export default function SecondPart() {
   const navigate = useNavigate();
-
   const handleClick = (path) => {
     navigate(path);
   };
-
   return (
     <SecondPartStyled>
+      {" "}
       <div className="main" onClick={() => handleClick("./standard")}>
-        <h1>STANDARD</h1>
+        {" "}
+        <h1>STANDARD</h1>{" "}
         <h5>
-          2 Visuels par semaine <br />
-          <br />
-        </h5>
+          {" "}
+          2 Visuels par semaine <br /> <br />{" "}
+        </h5>{" "}
         <p>
-          - Service de design graphique plus avancé
-          <br /> - Création de supports marketing (flyers, brochures) <br />-
-          Jusqu'à 5 révisions incluses <br />- Support par email, chat et
-          téléphone
-          <br /> - Délais de livraison plus rapides
-          <br />
-          <br />
-          <span>Prix mensuel : 449€ TTC</span>
-        </p>
-      </div>
+          {" "}
+          - Service de design graphique plus avancé <br /> - Création de
+          supports marketing (flyers, brochures) <br />- Jusqu'à 5 révisions
+          incluses <br />- Support par email, chat et téléphone <br /> - Délais
+          de livraison plus rapides <br /> <br />{" "}
+          <span>Prix mensuel : 449€ TTC</span>{" "}
+        </p>{" "}
+      </div>{" "}
       <TransparentSquare
         width={"150px"}
         height={"100px"}
         top={"-10%"}
         left={"-2%"}
-      />
+      />{" "}
       <TransparentSquare
         width={"150px"}
         height={"100px"}
         top={"85%"}
         left={"75%"}
-      />
-      <ChooseButton right={false} top={"30%"} left={"-25%"} />
+        className={"second"}
+      />{" "}
+      <ChooseButton
+        right={false}
+        top={"30%"}
+        left={"-25%"}
+        className={"responsive"}
+      />{" "}
     </SecondPartStyled>
   );
 }
-
 const SecondPartStyled = styled.div`
   width: 30%;
-  height: 37vh;
+  height: 445px;
   position: absolute;
   top: 25%;
   left: 65%;
@@ -84,5 +86,74 @@ const SecondPartStyled = styled.div`
     span {
       font-weight: bold;
     }
+  } /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1536px) {
+    height: 320px;
+    .responsive {
+      left: -28%;
+    }
+    .main {
+      width: 320px;
+      h1 {
+        font-size: 60px;
+        color: #2b2b2b;
+      }
+      h5 {
+        font: normal normal bold 12px "Century Gothic";
+      }
+      p {
+        font: normal normal normal 11px "Century Gothic";
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+    .second {
+      display: none;
+    }
   }
+  @media (max-width: 1280px) {
+    width: 345px;
+    .main {
+      width: 345px;
+    }
+  }
+  @media (max-width: 1024px) {
+    top: 35%;
+    left: 57%;
+  }
+  @media (max-width: 860px) {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    .main {
+      transform: perspective(00px) rotateY(0deg);
+    }
+    .responsive {
+      top: 90%;
+      z-index: 2;
+      width: 53%;
+      left: -25%;
+    }
+  }
+  @media (max-width: 515px) {
+    width: 85%;
+    height: 340px;
+    margin-left: 6.5%;
+    .main {
+      width: 100%;
+      padding-bottom: 20px;
+      p {
+        width: 89%;
+        font-size: 0.9rem;
+      }
+    }
+    .responsive {
+      top: 100%;
+      z-index: 2;
+      width: 69.5%;
+      left: -3%;
+    }
+  }
+ 
 `;

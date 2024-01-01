@@ -79,4 +79,33 @@ const ContactInfosStyled = styled.div`
       color: #e0d1a1;
     }
   }
+
+  * RESPONSIVE DESIGN BEGINS HERE */ @media (max-width:1536px) {
+  }
+
+  @media (max-width: 1280px) {
+    width: 43% !important;
+    min-height: 150px !important;
+  }
+
+  
+  @media (max-width: 1024px) {
+    width: 80% !important;
+    .info{
+      justify-content: space-evenly;
+    }
+
+    span{
+      font-size:16px;
+    }
+    .logo{
+      font-size: 35px;
+    }
+  }
+
+
+  @media (max-width: 640px) {
+    width: 85% !important;
+    padding:0px 20px;
+  }
 `;

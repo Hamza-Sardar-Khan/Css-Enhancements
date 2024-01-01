@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function TransparentSquare({ width, height, top, left }) {
+export default function TransparentSquare({ className ,width, height, top, left }) {
   return (
     <TransparentSquareStyled
       width={width}
       height={height}
       top={top}
       left={left}
+      className={className}
     >
       <div></div>
     </TransparentSquareStyled>

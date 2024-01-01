@@ -41,4 +41,23 @@ const ContactBioStyled = styled.div`
     font-family: "Century Gothic";
     font-size: 10px;
   }
+
+  
+  @media (max-width: 1280px) {
+    width: 43% !important;
+    min-height: 150px !important;
+ 
+  }
+
+  
+  @media (max-width: 1024px) {
+    width: 80% !important;
+
+  }
+
+  
+  @media (max-width: 640px) {
+    width: 85% !important;
+    padding:0px 20px;
+  }
 `;

@@ -53,13 +53,14 @@ const ServicesCategorieStyled = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 120px;
-  height: 31vh;
+  min-height: 300px;
   width: 100%;
+  flex-wrap: wrap;
 
   .entreprise {
     cursor: pointer;
-    width: 15%;
-    height: 31vh;
+    width: 280px;
+    height: 300px;
     background: transparent
       linear-gradient(45deg, #0f0f6b 0%, #28bec3 87%, #28c0c5 100%) 0% 0%
       no-repeat padding-box;
@@ -81,8 +82,8 @@ const ServicesCategorieStyled = styled.div`
 
   .influenceur {
     cursor: pointer;
-    width: 15%;
-    height: 31vh;
+     width: 280px;
+    height: 300px;
     background: transparent
       linear-gradient(
         225deg,
@@ -111,8 +112,8 @@ const ServicesCategorieStyled = styled.div`
   }
   .particulier {
     cursor: pointer;
-    width: 15%;
-    height: 31vh;
+     width: 280px;
+    height: 300px;
 
     background: transparent linear-gradient(226deg, #d6c428 0%, #8021a8 90%) 0%
       0% no-repeat padding-box;
@@ -129,6 +130,18 @@ const ServicesCategorieStyled = styled.div`
     .icon-business {
       height: 150px;
       font-size: 150px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .entreprise, .influenceur, .particulier {
+      width: 90%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 `;

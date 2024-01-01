@@ -53,4 +53,40 @@ const ContactPageStyled = styled.div`
       }
     }
   }
+
+  @media (max-width: 1280px) {
+    .first-line {
+      height: 17%;
+      display: flex;
+      justify-content: space-evenly !important;
+      align-items: center;
+      gap: 0%;
+    }
+    .picture {
+      width: 100% !important;
+    }
+    .picture img {
+      width: 100vw;
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .picture {
+      height: 220px !important;
+    }
+    min-height: 150vh !important;
+    .first-line {
+      min-height: 400px !important;
+      display: flex;
+      justify-content: space-evenly !important;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px !important;
+    }
+  }
+  @media (max-height: 670px) {
+    height:200vh;
+  }
+
 `;

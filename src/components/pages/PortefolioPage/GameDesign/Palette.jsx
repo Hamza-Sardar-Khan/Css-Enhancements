@@ -69,4 +69,18 @@ const PaletteStyled = styled.div`
       background: #203813 0% 0% no-repeat padding-box;
     }
   }
+
+  @media (max-width: 1536px) {
+    .palette{
+      width:400px !important ;
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    .palette{
+      width:90% !important ;
+    }
+
+  }
 `;

@@ -14,7 +14,7 @@ export default function ServicesFooter() {
 
 const ServicesFooterStyled = styled.div`
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
   bottom: 3%;
   border-top: 1px solid #e0d1a1;
@@ -23,5 +23,21 @@ const ServicesFooterStyled = styled.div`
   p {
     font: normal normal normal 1.04vw Century Gothic;
     letter-spacing: 0px;
+  }
+
+  @media (max-width: 1536px) {
+    bottom:2%;
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 1124px) {
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+    p {
+      font-size: 1rem;
+    }
   }
 `;

@@ -1,43 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 import TransparentSquare from "../../../../reusable-ui/TransparentSquare";
-
 export default function ThirdPart() {
   return (
     <ThirdPartStyled>
+      {" "}
       <div className="main">
-        <h1>PREMIUM</h1>
-
+        {" "}
+        <h1>PREMIUM</h1>{" "}
         <p>
+          {" "}
           - Design haut de gamme et créatif <br /> - Création de matériel visuel
           avancé <br />- Illustrations personnalisées <br />- Révisions
-          illimitées
-          <br /> - Support prioritaire par email, chat ou téléphone <br /> -
-          Gestion de projet dédiée
-          <br />
-          <br />
-          <span>Prix mensuel : 1250€ TTC</span>
-        </p>
-      </div>
+          illimitées <br /> - Support prioritaire par email, chat ou téléphone{" "}
+          <br /> - Gestion de projet dédiée <br /> <br />{" "}
+          <span>Prix mensuel : 1250€ TTC</span>{" "}
+        </p>{" "}
+      </div>{" "}
       <TransparentSquare
         width={"25%"}
         height={"32%"}
         top={"80%"}
         left={"-8%"}
-      />
-      <TransparentSquare
-        width={"25%"}
-        height={"40%"}
-        top={"55%"}
-        left={"80%"}
-      />
+      />{" "}
     </ThirdPartStyled>
   );
 }
-
 const ThirdPartStyled = styled.div`
   width: 32%;
-  height: 31vh;
+  height: 340px;
   position: absolute;
   top: 56%;
   left: 33%;
@@ -61,12 +52,66 @@ const ThirdPartStyled = styled.div`
       font-size: 4.9vw;
     }
     p {
-      font: normal normal normal 0.8vw "Century Gothic";
+      font: normal normal normal 0.8vw "Century Gothic"; 
       text-align: justify;
       width: 80%;
     }
     span {
       font-weight: bold;
     }
+  } /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1536px) {
+    height: 340px;
+    .main {
+      h1 {
+        font-size: 60px;
+      }
+      h5 {
+        font: normal normal bold 12px "Century Gothic";
+      }
+      p {
+        font: normal normal normal 11px "Century Gothic";
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+    top: 62%;
+  }
+  @media (max-width: 1280px) {
+    width: 345px;
+    .main {
+      width: 345px;
+    }
+  }
+  @media (max-width: 1024px) {
+    top: 75%;
+    left: 33%;
+  }
+  @media (max-width: 860px) {
+    position: relative;
+    top: 0%;
+    left: 0%;
+  }
+  @media (max-width: 515px) {
+    width: 85%;
+    height: 340px;
+    margin-left: 6.5%;
+    .main {
+      width: 100%;
+      padding-bottom: 10px;
+      p {
+        font-size: 0.9rem;
+      }
+    }
+    .responsive {
+      top: 100%;
+      z-index: 2;
+      width: 69.5%;
+      left: -3%;
+    }
+  }
+  @media (max-height: 600px) {
+    top: 90%;
   }
 `;

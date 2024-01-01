@@ -101,4 +101,60 @@ const DescriptionStyled = styled.div`
     top: -170%;
     left: 65%;
   }
+
+  @media (max-width: 1024px) {
+    .container{
+      gap:5%;
+    }
+    img {
+      width: 100%;
+      height: 67%;
+    }
+    .castle{
+      left:2%;
+    }
+    .door{
+      left:70%;
+    }
+    .block{
+      padding:20px 0px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container{
+      align-items: flex-end;
+    }
+    .castle{
+      width: 34%;
+      top:-50%;
+    }
+    .door{
+      left:0%;
+    }
+    .block{
+      width:60% !important;
+      p{
+        font-size:11px !important;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    .block{
+      width:50% !important;
+      height:16% !important;
+    }
+    #start{
+      height:20% !important;
+    }
+    .castle{
+      width:44%;
+      height:72%;
+    }
+    .door{
+      width:58%;
+      height:71%;
+    }
+  }
 `;

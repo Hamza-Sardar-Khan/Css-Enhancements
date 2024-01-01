@@ -48,7 +48,7 @@ export default function Building() {
 
 const BuildingStyled = styled.div`
   width: 100%;
-  height: 37vh;
+  min-height: 37vh;
   margin-top: 2.5%;
   display: flex;
   align-items: center;
@@ -91,6 +91,34 @@ const BuildingStyled = styled.div`
         letter-spacing: 0px;
         color: #e0d1a1;
       }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    margin-bottom:200px;
+    .parents{
+      width:230px  !important;
+      height: 285px !important;
+      
+    }
+    .content{
+      flex-wrap: wrap;
+      row-gap: 50px;
+      column-gap: 50px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom:100px;
+    .parents{
+      width:80%  !important;
+      height: 285px !important;
+      
+    }
+    .content{
+      flex-wrap: wrap;
+      row-gap: 50px;
+      column-gap: 50px;
     }
   }
 `;

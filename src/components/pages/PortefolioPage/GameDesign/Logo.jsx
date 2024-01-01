@@ -111,4 +111,42 @@ const LogoStyled = styled.div`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    .content{
+      width:95%;
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    margin-bottom:150px;
+    .content{
+      flex-direction: row-reverse;
+      flex-wrap:wrap;
+      justify-content: space-evenly !important;
+    
+    }
+
+    .description{
+      width:85% !important;
+      height:28% !important;
+    }
+    .logo{
+      width:40% !important;
+      height:auto;
+    }
+  }
+
+  @media (max-width: 525px) {
+    .logo, .version{
+      width:47% !important;
+      height:81% !important;
+    }
+    .description{
+      width:100%;
+      height: 50%!important;
+    }
+
+  }
 `;

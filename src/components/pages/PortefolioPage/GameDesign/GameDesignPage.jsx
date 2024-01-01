@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import ProjectNavBar from "../../../reusable-ui/ProjectNavBar";
 import fortress from "../../../../../public/illustration site internet/portefolio/LengendOfFortress/FOL1.png";
@@ -18,7 +17,7 @@ export default function GameDesignPage() {
       <div className="first"></div>
       <Charactere />
       <div className="fortress-picture">
-        <img src={fortress} alt="" />
+        {/* <img src={fortress} alt="" /> */}
       </div>
       <Fortress />
       <Description />
@@ -56,24 +55,13 @@ export default function GameDesignPage() {
 
 const GameDesignPageStyled = styled.div`
   width: 100%;
-  height: 775vh;
+  min-height: 775vh;
   overflow: hidden;
   color: #ffffff;
-
-  &::before {
-    content: "";
-    position: absolute;
-    height: 775vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../../../../public/illustration site internet/portefolio/LengendOfFortress/FOND_3.png");
-    background-size: 100% auto; // Largeur à 100%, hauteur auto pour garder les proportions
-    background-position: top center; // Centrer l'image
-    background-repeat: no-repeat; // Ne pas répéter l'image
-    z-index: -1;
-  }
+  background-image: url("../../../../../public/illustration site internet/portefolio/LengendOfFortress/FOND_3.png");
+  background-size: 100% 100%; // Largeur à 100%, hauteur auto pour garder les proportions
+  background-position: top center; // Centrer l'image
+  background-repeat: repeat; // Ne pas répéter l'image
   .first {
     width: 100%;
     height: 80vh;
@@ -82,12 +70,13 @@ const GameDesignPageStyled = styled.div`
   .fortress-picture {
     width: 100%;
     height: 100vh;
-    img {
-      height: 100%;
-      width: 100%;
-    }
+    background-image: url("../../../../../public/illustration site internet/portefolio/LengendOfFortress/FOL1.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .soldat {
+    margin-top: 10%;
     position: relative;
     top: 3%;
     left: 6%;
@@ -111,6 +100,7 @@ const GameDesignPageStyled = styled.div`
       background: transparent linear-gradient(68deg, #011215 0%, #043a48 100%)
         0% 0% no-repeat padding-box;
       box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
+      padding: 10px 0px;
       border-radius: 10px;
       z-index: 1;
       display: flex;
@@ -137,4 +127,78 @@ const GameDesignPageStyled = styled.div`
     letter-spacing: 0px;
     color: #e0d1a1;
   }
+
+  @media (max-width: 1536px) {
+    padding-bottom: 5vh;
+    .fortress-picture {
+      height: 90vh !important;
+      background-size: 160% 100%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .description-jeu {
+      left: 41%;
+      width: 57%;
+    }
+    .description-jeu .second-description {
+      top: -10%;
+      left: 40%;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .soldat {
+      width: 52%;
+    }
+    .description-jeu {
+      left: 21%;
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .soldat {
+      width: 72%;
+    }
+
+    .description-jeu {
+      left: 11%;
+      width: 85%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .soldat {
+      width: 99%;
+      left: 1%;
+    }
+
+    .description-jeu {
+      left: 1%;
+      width: 99%;
+    }
+    .description-jeu .second-description {
+      left: 14%;
+    }
+    .description-jeu .first-description,
+    .description-jeu .second-description {
+      width: 83%;
+    }
+  }
+  @media (min-height: 1024px){
+    min-height:900vh;
+  } 
+  @media (min-height: 1179px){
+    min-height:805vh;
+  } 
+  @media (min-height: 1365px){
+    min-height:710vh;
+  }
+  @media (min-height: 1368px){
+    min-height:770vh;
+  }
+
+
 `;

@@ -43,7 +43,39 @@ export default function FirstPartInfluenceur() {
 
 const FirstPartInfluenceurStyled = styled.div`
   width: 33%;
-  height: 40vh;
+  height: 435px;
+
+  .main {
+    position: relative;
+    cursor: pointer;
+    background: transparent linear-gradient(55deg, #d0c3f5 0%, #ffffff 100%) 0%
+      0% no-repeat padding-box;
+    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    transform: translate(10%, -15%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #292929;
+    h1 {
+      font-size: 4.9vw;
+      color: #2b2b2b;
+    }
+    h5 {
+      font: normal normal bold 0.8vw "Century Gothic";
+    }
+    p {
+      font: normal normal normal 0.8vw "Century Gothic";
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+
   .title {
     position: relative;
     width: 50%;
@@ -72,39 +104,102 @@ const FirstPartInfluenceurStyled = styled.div`
       align-items: center;
       justify-content: center;
       width: 50%;
-      height: 100%;
+      height: 100%; 
       img {
         width: 70%;
       }
+
+      width: 200px;
+      height: 80px;
+
+      p {
+        font-size: 14px;
+      }
+
+      .icon {
+        font-size: 60px;
+      }
     }
   }
-  .main {
-    position: relative;
-    background: transparent linear-gradient(55deg, #d0c3f5 0%, #ffffff 100%) 0%
-      0% no-repeat padding-box;
-    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
-    border-radius: 10px;
-    width: 80%;
-    height: 80%;
-    transform: translate(10%, -15%);
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #292929;
-    h1 {
-      font-size: 4.9vw;
-      color: #2b2b2b;
+
+  /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1536px) {
+    height: 340px;
+    .main {
+      h1 {
+        font-size: 60px;
+        color: #2b2b2b;
+      }
+      h5 {
+        font: normal normal bold 12px "Century Gothic";
+      }
+      p {
+        font: normal normal normal 11px "Century Gothic";
+      }
+      span {
+        font-weight: bold;
+      }
     }
-    h5 {
-      font: normal normal bold 0.8vw "Century Gothic";
+  }
+
+  @media (max-width: 1280px) {
+    width: 345px;
+    .main {
+      width: 345px;
     }
-    p {
-      font: normal normal normal 0.8vw "Century Gothic";
+
+    .responsive {
+      left: 106%;
     }
-    span {
-      font-weight: bold;
+
+    .title{
+      width: 200px;
+      height: 80px;
+  
+      p{
+        font-size: 14px;
+      }
+  
+      .icon{
+        font-size:60px;
+      }
+    }
+  }
+
+
+  
+ 
+
+  @media (max-width: 860px) {
+    margin-right: 10%;
+    .main {
+      height: 100%;
+    }
+    .responsive {
+      top: -20%;
+      z-index: 2;
+      width: 53%;
+      left: 75%;
+    }
+  }
+
+  @media (max-width: 515px) {
+    width: 95%;
+    height: 340px;
+    .main {
+      width: 90%;
+      padding-bottom: 10px;
+      p {
+        width: 89%;
+        font-size: 0.9rem;
+      }
+    }
+    margin-right: 0%;
+    .responsive {
+      top: -19%;
+      z-index: 2;
+      width: 69.5%;
+      left: 7%;
     }
   }
 `;

@@ -97,4 +97,44 @@ const DesignStyled = styled.div`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    .content {
+      width: 90%;
+    }
+    .first {
+      height: 80% !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .content {
+      width: 100%;
+    }
+    .third {
+      align-items: flex-end !important;
+    }
+  }
+
+  @media (max-width: 550px) {
+    height: 50vh;
+    margin-bottom: 100px;
+    .content{
+      flex-direction: column;
+      align-items: center;
+    } .first {
+      height: 250px !important;
+      width: 180px !important;
+    }
+
+    .third {
+      flex-direction: row  !important;
+      width:100% !important;
+    }
+
+     .third img  {
+      width: 80px !important;
+      height: 80px !important;
+  }
+  }
 `;

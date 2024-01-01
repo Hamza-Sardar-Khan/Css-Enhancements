@@ -63,7 +63,7 @@ const DescriptifStyled = styled.div`
   p {
     width: 90%;
     text-align: left;
-    font: normal normal normal 10px Century Gothic;
+    font: normal normal normal 13px Century Gothic;
     letter-spacing: 0px;
     color: #ffffff;
   }
@@ -86,9 +86,26 @@ const DescriptifStyled = styled.div`
     p {
       width: 60%;
       text-align: left;
-      font: normal normal normal 10px Century Gothic;
+      font: normal normal normal 13px Century Gothic;
       letter-spacing: 0px;
       color: #ffffff;
     }
+  }
+
+  @media (max-width: 1280px) {
+    width:25%;
+    height: 90%;
+   .bottom p , p{
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width:40%;
+    
+  }
+
+  @media (max-width: 660px) {
+    width: 90%;
   }
 `;
