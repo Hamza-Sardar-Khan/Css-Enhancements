@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import SectionNavBar from "../../../../../reusable-ui/SectionNavBar";
 import ServicesFooter from "../../../../../reusable-ui/ServicesFooter";
@@ -88,145 +87,129 @@ export default function EntrepriseBasicPage() {
 }
 
 const EntrepriseBasicPageStyled = styled.div`
-  min-height: 100vh;
-  width: 100%;
-  color: white;
+min-height: 100vh;
+padding-bottom: 50px;
+width: 100%;
+color: white;
+position: relative;
+display: flex;
+align-items: center;
+flex-direction: column;
+background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
+background-size: cover;
+background-repeat: no-repeat;
+h1 {
+  font-size: 4.86vw;
+  font-weight: 300;
+  text-align: center;
+}
+.main {
+  width: 48%;
+  padding-bottom: 8%;
   position: relative;
+  background: transparent linear-gradient(49deg, #c3f0f5 0%, #ffffff 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
+  border-radius: 10px;
   display: flex;
   align-items: center;
+  text-align: center;
   flex-direction: column;
-  &::before {
-    content: "";
-    height: 100%;
+  color: #2b2b2b;
+
+  .title {
+    height: 110px;
+    padding-left: 7%;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
+    left: -44%;
+    top: 4%;
   }
   h1 {
-    font-size: 4.86vw;
-    font-weight: 300;
-    text-align: center;
+    font: normal normal normal 5.34vw Bebas Neue;
+  }
+  h5 {
+    font: normal normal bold 1.87vw Century Gothic;
+    padding-bottom: 3%;
+  }
+  p {
+    width: 80%;
+    font: normal normal normal 14px Century Gothic;
+    text-align: justify;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1536px) {
+  .title {
+    width: auto;
+  }
+  h1 {
+    font-size: 60px;
   }
   .main {
-    width: 48%;
-    height: 75vh;
-    position: relative;
-    background: transparent linear-gradient(49deg, #c3f0f5 0%, #ffffff 100%) 0%
-      0% no-repeat padding-box;
-    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    color: #2b2b2b;
-
-    .title {
-      height: 110px;
-      padding-left: 7%;
-      display: flex;
-      justify-content: flex-start;
-      color: white;
-      position: absolute;
-      left: -44%;
-      top: 4%;
-    }
+    width: 50%;
+    height: auto;
+    padding-bottom: 3%;
     h1 {
-      font: normal normal normal 5.34vw Bebas Neue;
-    }
-    h5 {
-      font: normal normal bold 1.87vw Century Gothic;
-      padding-bottom: 3%;
+      font: normal normal normal 60px Bebas Neue;
     }
     p {
-      width: 80%;
-      font: normal normal normal 14px Century Gothic;
-      text-align: justify;
+      font-size: 13px;
+    }
+    h5 {
+      font-size: 21px;
     }
   }
-  .footer {
-    display: flex;
-    justify-content: center;
-  }
-
-  @media (max-width: 1536px) {
-    .title {
-      width: auto;
-    }
-    h1 {
-      font-size: 60px;
-    }
-    .main {
-      width: 50%;
-      height: auto;
-      padding-bottom: 3%;
-      h1 {
-        font: normal normal normal 60px Bebas Neue;
-      }
-      p {
-        font-size: 13px;
-      }
-      h5 {
-        font-size: 21px;
-      }
-    }
-  }
-
-  @media (max-width: 1280px) {
-
-    .main {
-      width: 70%;
-      .title {
-        left: -20%;
-      }
-    }
-    
   .nav-entereprise {
     display: flex;
     justify-content: center;
-    margin-top: 15%;
+    height:100px;
     position: relative;
     width: 100%;
   }
-  }
+}
 
-  @media (max-width: 640px) {
-    .main {
-      width: 90%;
-      margin-top: 10%;
-    }
+@media (max-width: 1280px) {
+
+  .main {
+    width: 70%;
     .title {
-      left: -10% !important;
-      top: -9% !important;
-    }
-    .responsive {
-      display: none;
-    }
-    .nav-entereprise {
-      margin-top: 25%;
+      left: -20%;
     }
   }
+}
 
-  @media (max-width: 440px) {
-   
-    .main {
-      margin-top: 20%;
-    }
-    .title {
-      padding-left: 5%;
-    }
-    .responsive {
-      display: none;
-    }
+@media (max-width: 640px) {
+  .main {
+    width: 90%;
+    margin-top: 10%;
+  }
+  .title {
+    left: -10% !important;
+    top: -9% !important;
+  }
+  .responsive {
+    display: none;
+  }
+}
 
+@media (max-width: 440px) {
+  .main {
+    margin-top: 20%;
+  }
+  .title {
+    padding-left: 5%;
+  }
+  .responsive {
+    display: none;
   }
 
- 
-  }
+}
+}
 `;

@@ -27,13 +27,13 @@ export default function GalleryPage() {
     <GalleryPageStyled>
       <ProjectNavBar label={"GALLERY"} />
       <div className="content">
-        <div className="icons" onClick={() => handleClick("left")}>
+        <div className="icons iconOne" onClick={() => handleClick("left")}>
           <FaCaretLeft />
         </div>
         <div className="picture">
           <img src={carrousel[index].imageSource} alt="" />
         </div>
-        <div className="icons" onClick={() => handleClick("right")}>
+        <div className="icons iconTwo" onClick={() => handleClick("right")}>
           <FaCaretRight />
         </div>
       </div>
@@ -43,21 +43,11 @@ export default function GalleryPage() {
 
 const GalleryPageStyled = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
-  &::before {
-    content: "";
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../../../../public/illustration site internet/services/bacground_entreprise.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
+  background-image: url("../../../../../public/illustration site internet/services/bacground_entreprise.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   .content {
     display: flex;
     flex-direction: row;
@@ -80,6 +70,51 @@ const GalleryPageStyled = styled.div`
     .icons {
       cursor: pointer;
       font-size: 50px;
+    }
+  }
+  @media (max-width: 1160px) {
+    .icons {
+      position: absolute;
+    }
+    .picture {
+      width: 623px !important;
+    }
+    .iconOne {
+      left: 2%;
+      bottom: 40%;
+    }
+    .iconTwo {
+      right: 2%;
+      bottom: 40%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .picture {
+      width: 500px !important;
+    }
+    .iconOne {
+      left: 0.2%;
+      bottom: 40%;
+    }
+    .iconTwo {
+      right: 0.2%;
+      bottom: 40%;
+    }
+  }
+  @media (max-width: 530px) {
+    .picture {
+      width: 97% !important;
+    }
+    .iconOne {
+      left: 30%;
+      bottom: auto;
+      top: 80%;
+    }
+    .iconTwo {
+      right: 30%;
+      bottom: auto;
+      top: 80%;
     }
   }
 `;

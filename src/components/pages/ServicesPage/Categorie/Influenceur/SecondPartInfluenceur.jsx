@@ -37,7 +37,7 @@
           className={"second"}
         />
         {/* <ChooseButton right={false} top={"30%"} left={"-25%"} className={"responsive"} /> */}
-      </SecondPartInfluenceurStyled>
+      </SecondPartInfluenceurStyled> 
     );
   }
 
@@ -45,10 +45,10 @@
   width: 30%;
   height: 435px;
   position: absolute;
-  top: 25%;
+  top: 12%;
   left: 65%;
   .main {
-    position: relative;
+    position: relative; 
     width: 100%;
     height: 80%;
     transform: perspective(600px) rotateY(-10deg);
@@ -98,7 +98,7 @@
         font: normal normal normal 11px "Century Gothic";
       }
       span {
-        font-weight: bold;
+        font-weight: bold; 
       }
     }
     .second {
@@ -112,7 +112,7 @@
     }
   }
   @media (max-width: 1024px) {
-    top: 35%;
+    top: 15%;
     left: 57%;
   }
   @media (max-width: 860px) {

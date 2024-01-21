@@ -11,10 +11,11 @@ export default function EntrepriseStandardPage() {
     <EntrepriseStandardPageStyled>
       <SectionNavBar />
       <h1>SERVICES</h1>
-      <div className="title">
-        <TitleEntreprise />
-      </div>
+
       <div className="main">
+        <div className="title">
+          <TitleEntreprise />
+        </div>
         <h1>STANDARD</h1>
         <h5>2 Visuels par semaine</h5>
         <p>
@@ -52,7 +53,9 @@ export default function EntrepriseStandardPage() {
       <div className="footer">
         <ServicesFooter />
       </div>
-      <NavBarEntreprise />
+      <div className="nav-entereprise">
+        <NavBarEntreprise />
+      </div>
       <TransparentSquare
         width={"150px"}
         height={"100px"}
@@ -76,52 +79,47 @@ export default function EntrepriseStandardPage() {
 }
 
 const EntrepriseStandardPageStyled = styled.div`
+
   min-height: 100vh;
+  padding-bottom: 50px;
   width: 100%;
   color: white;
-
-  &::before {
-    content: "";
-    height: 100vh;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   h1 {
     font-size: 4.86vw;
     font-weight: 300;
     text-align: center;
   }
-  .title {
-    width: 16.5%;
-    height: 12.5%;
-    padding-left: 7%;
-    display: flex;
-    justify-content: flex-start;
-  }
   .main {
     width: 48%;
-    height: 75%;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-bottom: 8%;
+    position: relative;
     background: transparent linear-gradient(47deg, #82d3dc 0%, #b9eef3 100%) 0%
-      0% no-repeat padding-box;
-    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
+    0% no-repeat padding-box;
+  box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
     border-radius: 10px;
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
     color: #2b2b2b;
+
+    .title {
+      height: 110px;
+      padding-left: 7%;
+      display: flex;
+      justify-content: flex-start;
+      color: white;
+      position: absolute;
+      left: -44%;
+      top: 4%;
+    }
     h1 {
       font: normal normal normal 5.34vw Bebas Neue;
     }
@@ -131,12 +129,80 @@ const EntrepriseStandardPageStyled = styled.div`
     }
     p {
       width: 80%;
-      font: normal normal normal 0.69vw Century Gothic;
+      font: normal normal normal 14px Century Gothic;
       text-align: justify;
     }
   }
   .footer {
     display: flex;
     justify-content: center;
+  }
+
+  @media (max-width: 1536px) {
+    .title {
+      width: auto;
+    }
+    h1 {
+      font-size: 60px;
+    }
+    .main {
+      width: 50%;
+      height: auto;
+      padding-bottom: 3%;
+      h1 {
+        font: normal normal normal 60px Bebas Neue;
+      }
+      p {
+        font-size: 13px;
+      }
+      h5 {
+        font-size: 21px;
+      }
+    }
+    .nav-entereprise {
+      display: flex;
+      justify-content: center;
+      height:100px;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+
+    .main {
+      width: 70%;
+      .title {
+        left: -20%;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .main {
+      width: 90%;
+      margin-top: 10%;
+    }
+    .title {
+      left: -10% !important;
+      top: -9% !important;
+    }
+    .responsive {
+      display: none;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .main {
+      margin-top: 20%;
+    }
+    .title {
+      padding-left: 5%;
+    }
+    .responsive {
+      display: none;
+    }
+
+  }
   }
 `;

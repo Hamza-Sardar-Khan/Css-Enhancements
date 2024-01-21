@@ -258,4 +258,5 @@ const BylinaStyled = styled.div`
       height: 94%;
     }
   }
+
 `;

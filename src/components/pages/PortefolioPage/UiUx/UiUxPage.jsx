@@ -46,4 +46,15 @@ const UiUxPageStyled = styled.div`
       height: 100%;
     }
   }
+  @media (max-width: 660px) {
+    background-image: url("../../../../../public/illustration site internet/portefolio/UxUI/background.png");
+    min-height: 400vh;
+    height: auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &::before{
+      display:none;
+        }
+    
+  }
 `;

@@ -14,7 +14,6 @@ export default function ServicesFooter() {
 
 const ServicesFooterStyled = styled.div`
   position: absolute;
-  display: none;
   justify-content: center;
   bottom: 3%;
   border-top: 1px solid #e0d1a1;

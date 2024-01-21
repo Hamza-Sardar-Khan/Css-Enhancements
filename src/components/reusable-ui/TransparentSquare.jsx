@@ -26,5 +26,5 @@ const TransparentSquareStyled = styled.div`
   box-shadow: inset 0px 10px 6px #58585829;
   border-radius: 10px;
   opacity: 0.15;
-  z-index: -1;
+  z-index: 1;
 `;

@@ -18,4 +18,7 @@ const BlueSquareStyled = styled.div`
   border-radius: 10px;
   opacity: 0.7;
   z-index: ${(props) => props.zindex};
+  @media (max-width: 1024px) {
+    display:none;
+  }
 `;

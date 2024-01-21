@@ -108,4 +108,9 @@ const DescriptifStyled = styled.div`
   @media (max-width: 660px) {
     width: 90%;
   }
+  
+  @media (max-height: 601px) {
+  overflow:hidden;      
+
+  }
 `;

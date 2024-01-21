@@ -30,7 +30,7 @@ const ThirdPartStyled = styled.div`
   width: 32%;
   height: 340px;
   position: absolute;
-  top: 56%;
+  top: 47%;
   left: 33%;
   .main {
     position: relative;
@@ -74,9 +74,9 @@ const ThirdPartStyled = styled.div`
       }
       span {
         font-weight: bold;
-      }
+      }  
     }
-    top: 62%;
+    top: 52%;
   }
   @media (max-width: 1280px) {
     width: 345px;
@@ -85,7 +85,7 @@ const ThirdPartStyled = styled.div`
     }
   }
   @media (max-width: 1024px) {
-    top: 75%;
+    top: 55%;
     left: 33%;
   }
   @media (max-width: 860px) {
@@ -111,7 +111,5 @@ const ThirdPartStyled = styled.div`
       left: -3%;
     }
   }
-  @media (max-height: 600px) {
-    top: 90%;
-  }
+ 
 `;

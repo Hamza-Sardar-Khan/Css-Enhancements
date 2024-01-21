@@ -53,7 +53,7 @@ const SecondPartStyled = styled.div`
   width: 30%;
   height: 445px;
   position: absolute;
-  top: 25%;
+  top: 12%;
   left: 65%;
   .main {
     position: relative;
@@ -119,7 +119,7 @@ const SecondPartStyled = styled.div`
     }
   }
   @media (max-width: 1024px) {
-    top: 35%;
+    top: 15%;
     left: 57%;
   }
   @media (max-width: 860px) {

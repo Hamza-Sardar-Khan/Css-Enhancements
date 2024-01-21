@@ -43,26 +43,15 @@ export default function ParticulierPage() {
   );
 }
 
-
 const ParticulierPageStyled = styled.div`
   min-height: 100vh;
   width: 100%;
   color: white;
+  background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
 
-  &::before {
-    content: "";
-    min-height: 110vh;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
   h1 {
     font-size: 70px;
     font-weight: 300;
@@ -70,6 +59,10 @@ const ParticulierPageStyled = styled.div`
   }
   .content {
     padding-left: 5%;
+  }
+  .main-content {
+    min-height: 843px;
+    position: relative;
   }
   .footer {
     display: flex;
@@ -105,20 +98,26 @@ const ParticulierPageStyled = styled.div`
       width: 36%;
       height: 100%;
       background: transparent
-      linear-gradient(
-        225deg,
-        #5c0f6b 0%,
-        #9346b4d6 15%,
-        #2dd8de 87%,
-        #11f7ff 100%
-      )
-      0% 0% no-repeat padding-box;
-    box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
+        linear-gradient(
+          225deg,
+          #5c0f6b 0%,
+          #9346b4d6 15%,
+          #2dd8de 87%,
+          #11f7ff 100%
+        )
+        0% 0% no-repeat padding-box;
+      box-shadow: inset 0px 10px 6px #58585829, 0px 10px 6px #00000029;
       border-radius: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1736px) {
+    .footer {
+      position: relative;
     }
   }
 
@@ -133,7 +132,8 @@ const ParticulierPageStyled = styled.div`
       }
       .entreprise,
       .influenceur {
-        width: 80px;
+        width: 80px !important;
+        height: 80px !important;
       }
     }
   }
@@ -146,7 +146,6 @@ const ParticulierPageStyled = styled.div`
   }
 
   @media (max-width: 860px) {
-    padding-bottom: 150px;
     position: relative;
     .main-content {
       display: flex;
@@ -157,30 +156,27 @@ const ParticulierPageStyled = styled.div`
     }
 
     .nav {
-      height:100px;
+      height: 100px;
       position: relative;
-      padding-top: 100px;
-      .entreprise,
-      .influenceur {
-        width: 80px;
-        height:100px;
-      }
+      padding-top: 20px;
     }
   }
   @media (max-width: 600px) {
     padding-bottom: 40px;
   }
 
-  @media (max-height: 600px) {
-    &::before {
-      min-height: 150vh;
-    }
+  @media (min-height: 1023px) {
+    min-height: 172vh;
   }
 
-  @media (min-height: 1024px) {
-    min-height: 142vh;
-    .nav{
-      padding-top: 40px;
+  @media (min-height: 1179px) {
+    min-height: 162vh;
+  }
+  @media (min-height: 1365px) {
+    min-height: 122vh;
+    .nav {
+      position: relative;
+      height: 100px;
     }
   }
 `;

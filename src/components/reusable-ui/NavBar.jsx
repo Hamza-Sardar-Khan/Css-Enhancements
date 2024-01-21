@@ -81,7 +81,7 @@ const NavBarStyled = styled.div`
     cursor: pointer;
   }
   .logo {
-    color: ${(props) => (!props.show ? "white" : "black")};
+    color: ${(props) => (!props.show ? "white" : "black")} !important;
 
     display: none !important;
   }

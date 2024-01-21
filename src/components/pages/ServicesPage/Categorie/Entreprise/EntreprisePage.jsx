@@ -29,22 +29,12 @@ export default function EntreprisePage() {
 
 const EntreprisePageStyled = styled.div`
   width: 100%;
-  
+  background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
-
-  &::before {
-    content: "";
-    min-height: 110vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../../../public/illustration site internet/services/bacground_entreprise.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
+  min-height: 100vh;
+  padding-bottom: 30px;
   h1 {
     font-size: 70px;
     font-weight: 300;
@@ -57,8 +47,18 @@ const EntreprisePageStyled = styled.div`
     display: flex;
     justify-content: center;
   }
+  .main-content {
+    min-height: 843px;
+    position: relative;
+  }
 
   /* RESPONSIVE DESIGN BEGINS HERE */
+  @media (max-width: 1736px) {
+    .footer {
+      position: relative;
+    }
+  }
+
   @media (max-width: 1024px) {
     .content {
       padding-left: 2%;
@@ -85,15 +85,18 @@ const EntreprisePageStyled = styled.div`
   @media (max-width: 600px) {
     padding-bottom: 40px;
   }
-
-  @media (max-height: 600px) {
-    &::before {
-      min-height: 150vh;
-    }
-  }
-
-  
   @media (min-height: 1024px) {
     min-height: 142vh;
+  }
+
+  @media (min-height: 1179px) {
+    min-height: 152vh;
+  }
+  @media (min-height: 1365px) {
+    min-height: 122vh;
+    .nav {
+      position: relative;
+      height: 100px;
+    }
   }
 `;

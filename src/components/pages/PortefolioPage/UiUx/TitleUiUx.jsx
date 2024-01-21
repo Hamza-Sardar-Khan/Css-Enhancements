@@ -23,4 +23,14 @@ const TitleUiUxStyled = styled.div`
     letter-spacing: 0px;
     color: #282828;
   }
+
+  @media (max-width: 1024px) {
+     h1 {
+      font: normal normal normal 58px/100px Bebas Neue;
+  }
+
+  @media (max-width: 660px) {
+    h1 {
+     font: normal normal normal 35px/100px Bebas Neue;
+ }
 `;
